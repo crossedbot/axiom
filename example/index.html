@@ -3,6 +3,8 @@
 	<head>
 		<link rel="stylesheet" href="fontawesome/css/all.min.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="../css/axiom.css" media="screen">
+
+		<script src="../js/axiom.js"></script>
 	</head>
 	<body style="margin-left:15px;overflow-x:hidden;">
 		<div style="width:450px;">
@@ -240,6 +242,37 @@
 			</div>
 
 			<div style="margin-bottom:300px;">Form Buffer Zone</div>
+		</div>
+
+		<div style="width:100%">
+			<h1>Modals</h1>
+			<div>
+				<button id="openModalBtn" class="btn">Open</button>
+
+				<div id="someModal" class="modal">
+					<div class="modal__container">
+						<span id="closeModalBtn" class="close">&times;</span>
+						<h1>A Modal Example</h1>
+						<div class="form__section">
+							<label for="textbox" class="form__label">TextBox:</label>
+							<input type="text" name="textbox" placeholder="Text.Box" class="form__textbox" />
+						</div>
+						<div>
+							<a href="#" class="link form__link">Link</a>
+						</div>
+					</div>
+					<script>
+						docReady(function() {
+							let modal = document.getElementById('someModal');
+							let btn = document.getElementById('openModalBtn');
+							let span = document.getElementById('closeModalBtn');
+							handleModal(modal, btn, span);
+						});
+					</script>
+				</div>
+			</div>
+
+			<div style="margin-bottom:300px;">Modal Buffer Zone</div>
 		</div>
 	</body>
 </html>
